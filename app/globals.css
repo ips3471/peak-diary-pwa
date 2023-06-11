@@ -3,4 +3,18 @@
 @tailwind utilities;
 
 @layer components {
+	.formInput {
+		@apply w-full text-2xl p-3 outline-none caret-orange-600;
+	}
+	.formContainer {
+		@apply py-8;
+	}
+}
+
+body {
+	background: linear-gradient(
+		0deg,
+		rgba(247, 178, 42, 1) 0%,
+		rgba(237, 147, 20, 1) 100%
+	);
 }

@@ -1,5 +1,8 @@
+'use client';
+
 import { Metadata } from 'next';
 import './globals.css';
+import { ModalContextProvider } from './context/ModalContext';
 
 export const metadata: Metadata = {
 	title: 'We-Account',
@@ -14,7 +17,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html>
-			<body>{children}</body>
+			<body className='h-screen bg-gradient-linear'>
+				<ModalContextProvider>
+					<main className='h-full'>{children}</main>
+				</ModalContextProvider>
+			</body>
 		</html>
 	);
 }
