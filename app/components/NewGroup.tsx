@@ -56,7 +56,6 @@ function NewGroup({}) {
 	const [personName, setPersonName] = useState<string>('');
 	const [groupMembers, setGroupMembers] = useState<GroupMember[]>([]);
 	const { hasDialog, onCancelDialog } = useModalContext();
-	const [hasModal, setHasModal] = useState(true);
 
 	const addGroupMember = (person: string) => {
 		const id = uuid();
@@ -76,14 +75,13 @@ function NewGroup({}) {
 	};
 
 	const handleBackgroundClick = () => {
-		// console.log('current dialog state', hasDialog);
-
 		if (!hasDialog) return;
 		onCancelDialog();
 	};
 
 	const handleCreate = () => {
 		console.log(groupMembers);
+		console.log(groupName);
 	};
 
 	const pages = [
